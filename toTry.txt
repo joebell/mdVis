@@ -1,0 +1,81 @@
+Sim Log:
+
+
+#7 - Nadrwoski6c
+Amp -11.5->-9.5 #32
+Freq 75 -> 1250 #128
+    LF rumble.
+    Res freq. increases.
+    Passive region ~ .5 *10^8
+    Active region ~ 1 *10^8
+    
+
+#8 - Passive
+Amp -11.5->-9.5 #32
+Freq 75 -> 1250 #128
+    No LF rumble. (Or any ampl. dependence.)
+    Resonance peak.
+
+#9 - nadrowski6c
+Amp -11.5->-9.5 #16
+Freq 75->1250 #32
+Amp2 -11.5->-9.5 #5
+Freq2 100->400 #4
+    Too coarse to tell what's going on.
+
+#10 - nadrowski6c - 1 sec stimulus, 
+Amp -11.5->-9.5 #16
+Freq 75->1250 #32
+Amp2 -11.5->-9.5 #5
+Freq2 100->400 #4
+    Crashed in parallel mode twice, abandoned
+
+#11 - nadrowski6c - 1 sec stimulus
+Amp -12 ->-9 #16
+Freq 50->1250 #32
+Amp2 -12->-9 #8
+Freq2 50->1250 #8
+    Works great in batch mode; ran overnight.
+    What's going on off the ends of the intensity spectrum?
+    
+#12 - nadrowski6c - 1 sec stimulus
+Amp -14 ->-7 #32
+Freq 50->1250 #32
+Amp2 0
+Freq2 0
+    Also returning abs. ampl.
+    Not much going on at ends of intensity spectrum.
+
+#13 - passiveAntenna - 1 sec stimulus Job9
+Amp -14 ->-7 #32
+Freq 50->1250 #32
+Amp2 0
+Freq2 0
+
+#14 - nadrowski6c - 1 sec stim. 
+Amp -13 -> -9 #32
+Freq 50->1250 #32
+Amp2 -13->-9  #32 (in 8 phases, 4 amps each)
+Freq2 50->1250 #16
+    Started phase _a(1) Not all finished. Unclear why - Was failing b/c -W = 2:00
+    Started phase _a(1) Job15 
+    Started phase _e(5) Job16
+    Started phase _c(3) Job17
+    Started phase _g(7) Job18
+
+#15 - passiveAntenna, same as 14
+    _a(1) Job 25
+    _c(3) Job 26
+    _e(5) Job 27
+    _g(7) Job 28
+
+#16 stiffNLAntenna
+    _a(1) Job
+    _c(3) 
+    _e(5)
+    _g(7)
+    
+
+
+
+
