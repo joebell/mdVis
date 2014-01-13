@@ -124,7 +124,6 @@ function mdVis(data,dataOut)
         subplot(4,2,[1,3,5]);  
         
         colormap(jet);
-        caxis([min((dataOutSensIX(:))) max((dataOutSensIX(:)))]);
         subArray = squeeze(dataOutSensIX( axLow(1):axHigh(1),...
                                   axLow(2):axHigh(2),...
                                   axLow(3):axHigh(3),...
@@ -139,6 +138,7 @@ function mdVis(data,dataOut)
         end
         imHandle = image(subArray,'CDataMapping','scaled');
         set(gca,'YDir','normal');
+        caxis([min((dataOutSensIX(:))) max((dataOutSensIX(:)))]);
         
         xlabel(['\color{blue}',axesList{xAxis},' - ',axLabels{xAxis}]);
         ylabel(['\color{magenta}',axesList{yAxis},' - ',axLabels{yAxis}]);
@@ -150,7 +150,6 @@ function mdVis(data,dataOut)
         subplot(4,2,[2,4,6]);  
         
         colormap(jet);
-        caxis([min((dataOutAmpIX(:))) max((dataOutAmpIX(:)))]);
         subArray = squeeze(dataOutAmpIX( axLow(1):axHigh(1),...
                                   axLow(2):axHigh(2),...
                                   axLow(3):axHigh(3),...
@@ -165,6 +164,7 @@ function mdVis(data,dataOut)
         end
         imHandle = image(subArray,'CDataMapping','scaled');
         set(gca,'YDir','normal');
+        caxis([min((dataOutAmpIX(:))) max((dataOutAmpIX(:)))]);
         
         xlabel(['\color{blue}',axesList{xAxis},' - ',axLabels{xAxis}]);
         ylabel(['\color{magenta}',axesList{yAxis},' - ',axLabels{yAxis}]);
