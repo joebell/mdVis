@@ -146,6 +146,14 @@ function mdVis(data,dataOut)
         set(gca,'XTick',[1 length(xDesc)],'XTickLabel',{xDesc(1) xDesc(end)});
         set(gca,'YTick',[1 length(yDesc)],'YTickLabel',{yDesc(1) yDesc(end)},'TickDir','out');
         title('Log Sensitivity'); 
+        hold on;
+        uniqueFreq = unique(data(:,2));
+        for n = 1:6
+            tFreq = n*200;
+            ix = dsearchn(uniqueFreq,tFreq);
+            plot(xlim(),[ix ix],'Color','w');
+        end
+
         
         subplot(4,2,[2,4,6]);  
         
@@ -172,6 +180,13 @@ function mdVis(data,dataOut)
         set(gca,'XTick',[1 length(xDesc)],'XTickLabel',{xDesc(1) xDesc(end)});
         set(gca,'YTick',[1 length(yDesc)],'YTickLabel',{yDesc(1) yDesc(end)},'TickDir','out');
         title('Log Amplitude'); 
+                hold on;
+        uniqueFreq = unique(data(:,2));
+        for n = 1:6
+            tFreq = n*200;
+            ix = dsearchn(uniqueFreq,tFreq);
+            plot(xlim(),[ix ix],'Color','w');
+        end
         
         subplot(4,2,7:8);  
         delete(locLabels); locLabels = [];
